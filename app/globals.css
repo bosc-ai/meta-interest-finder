@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+/* smooth theme animation */
+.theme-transition { transition: background-color .35s ease, color .35s ease; }
+
+/* nice cards */
+.card { @apply rounded-2xl border border-neutral-800 bg-neutral-900/60 backdrop-blur; }
+.btn { @apply px-3 py-2 rounded-xl text-sm font-medium; }
+.btn-primary { @apply btn bg-white text-black hover:bg-neutral-200; }
+.btn-ghost { @apply btn bg-neutral-900 border border-neutral-700 text-white; }
+.input { @apply px-3 py-2 rounded-xl bg-neutral-900 border border-neutral-700 text-sm outline-none; }
