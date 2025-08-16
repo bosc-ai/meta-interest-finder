@@ -1,5 +1,6 @@
 import crypto from "crypto";
 
+
 export function graphBase(v: string) {
   retur `https://graph.facebook.com/${v}`;
 }
@@ -13,6 +14,7 @@ export function appSecretProof(token: string, appSecret?: string) {
 export async function proxyFetch({ url, params, token, appSecret, signal }: any) {
   const u = new URL(url);
   for (const [k, v] of Object.entries(params || {})) if (v !== undefined) u.searchParams.set(k, String(v));
+
   u.searchParams.set("access_token", token);
   const proof = appSecretProof(token, appSecret);
   if (proof) u.searchParams.set("appsecret_proof", proof);
